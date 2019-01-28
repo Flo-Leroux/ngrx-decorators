@@ -22,9 +22,9 @@ export function Select(selectFn: any) {
             return createSelect(fn);
         };
 
-        const setter = function(value) {
+        const setter = function(value: any) {
             throw new Error(`Can not set ${value} for ${propertyKey}.`);
-        }
+        };
 
         Object.defineProperty(target, propertyKey, {
             get: getter,

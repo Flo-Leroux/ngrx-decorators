@@ -7,7 +7,7 @@ export function Reducer() {
 
         const meta = storageMetadata(target);
 
-        const newFn = function(state, action) {
+        const newFn = function(state: any, action: any) {
             if (state === undefined) {
                 state = this.metaState.initialState;
             }

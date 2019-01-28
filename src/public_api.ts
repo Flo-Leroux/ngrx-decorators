@@ -2,6 +2,10 @@
  * Public API Surface of ngrx-decorators
  */
 
-export * from './lib/ngrx-decorators.service';
-export * from './lib/ngrx-decorators.component';
-export * from './lib/ngrx-decorators.module';
+export * from './lib/action';
+export * from './lib/ngrxConnector';
+export * from './lib/reducer';
+export * from './lib/select';
+export * from './lib/singleton';
+export * from './lib/storageMetadata';
+export * from './lib/store';

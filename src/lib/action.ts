@@ -2,7 +2,7 @@
 import { storageMetadata } from './storageMetadata';
 import { NgrxConnector } from './ngrxConnector';
 
-const createDispatcher = function(obj) {
+const createDispatcher = function(obj: any) {
     const store = NgrxConnector.store;
     if (!store) {
         throw new Error('NgrxSelect not connected to store!');
@@ -37,7 +37,7 @@ export function Action(type: string, featureName = null, opts: IActionOpts = Opt
             fn: newFn
         };
 
-        descriptor.value = function (payload): boolean {
+        descriptor.value = function (payload: any): boolean {
             createDispatcher({
                 type: type,
                 payload: payload
